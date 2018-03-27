@@ -415,13 +415,6 @@
             </plugin>
         </plugins>
     </reporting>
-    
-    <distributionManagement>
-      <snapshotRepository>
-        <id>nexus-snapshots</id>
-        <url>http://localhost:8081/repository/maven-snapshots/</url>
-      </snapshotRepository>
-    </distributionManagement>
 
     <profiles>
         <profile>
@@ -493,5 +486,12 @@
         </repository>
     </repositories>
 
+    <distributionManagement>
+      <snapshotRepository>
+        <id>nexus-snapshots</id>
+        <url>http://localhost:8081/repository/maven-snapshots/</url>
+      </snapshotRepository>
+    </distributionManagement>
+    
     <url>demopetclinic</url>
 </project>
