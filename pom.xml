@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-petclinic</artifactId>
-    <version>5.0.4</version>
+    <version>5.0.4-SNAPSHOT</version>
 
     <name>petclinic</name>
     <packaging>war</packaging>
@@ -243,13 +243,8 @@
         </dependency>
     </dependencies>
 
-    <distributionManagement>
-      <snapshotRepository>
-        <id>nexus-snapshots</id>
-        <url>http://localhost:repository/maven-snapshots/</url>
-      </snapshotRepository>
-    </distributionManagement>
-    
+
+
     <!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
     <build>
         <defaultGoal>install</defaultGoal>
@@ -420,6 +415,14 @@
             </plugin>
         </plugins>
     </reporting>
+    
+    <distributionManagement>
+      <snapshotRepository>
+        <id>nexus-snapshots</id>
+        <url>http://localhost:8081/repository/maven-snapshots/</url>
+      </snapshotRepository>
+    </distributionManagement>
+
     <profiles>
         <profile>
             <id>HSQLDB</id>
